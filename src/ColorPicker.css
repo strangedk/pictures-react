@@ -1,0 +1,19 @@
+html {
+    color: #222;
+    font-size: 12px;
+}
+
+.container {
+    display: table;
+}
+
+.containerRow {
+    display: table-row;
+}
+
+.containerCell {
+    display: table-cell;
+    border: 1px solid olivedrab;
+    vertical-align: middle;
+    text-align: center;
+}
