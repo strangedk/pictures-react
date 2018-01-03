@@ -9,19 +9,16 @@ class ColorPickerGrid extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.onColorChange = props.onColorChange;
     };
 
     selectColor = (event) => {
-        let target = event.target;
-        let color = target.style["backgroundColor"];
+        let color = event.target.style["backgroundColor"];
 
-        this.onColorChange(color);
+        this.props.onColorChange(color);
     };
 
     render() {
-        let cells = this.colors.map(function(item, index) {
+        let cells = this.colors.map((item, index) => {
             return <div className="containerCell" style={{backgroundColor: "#" + item.toString(16)}} key={index}></div>
         });
 

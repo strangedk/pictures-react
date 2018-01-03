@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Pictures </title>
+    <title>Color Picker</title>
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -17,15 +17,16 @@
 <body>
 
 <p id="colorLabel">Selected Color</p>
-
 <div id="root"></div>
 
 <script type="text/babel">
     function updateColor(color) {
-        document.getElementById("colorLabel").style.backgroundColor = color;
+        let label = document.getElementById("colorLabel");
+            label.style.backgroundColor = color;
+            label.innerText = color.toString(16);
     }
 
-    ReactDOM.render(<ColorPickerGrid onColorChange={updateColor} />, document.getElementById('root'));
+    ReactDOM.render(<ColorPickerGrid onColorChange={updateColor} />, document.getElementById("root"));
 </script>
 
 </body>
