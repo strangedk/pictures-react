@@ -1,19 +1,23 @@
 html {
-    color: #222;
+    background-color: #222;
+    color: #eee;
     font-size: 12px;
 }
 
 .container {
-    width: 150px; height: 150px;
-    border-radius: 4px;
-    padding: 1px;
+    width: 124px;
+    height: 186px;
+    border-style: outset;
+    border-color: aliceblue;
+    border-radius: 8px;
+    background-color: azure;
 }
 
 .containerCell {
     border-style: inset;
     border-color: azure;
+    border-radius: 6px;
     float: left;
     width: 25px;
     height: 25px;
-    padding: 2px 2px 2px 2px;
 }

@@ -1,10 +1,4 @@
 class ColorPickerGrid extends React.Component {
-    constructor(params) {
-        super(params);
-
-        this.onColorChanged = null;
-    }
-
     colors = [
         0xFFFFF0, 0xF0E68C, 0xE6E6FA, 0xFFF0F5,
         0x7CFC00, 0xFFFACD, 0xADD8E6, 0xF08080,
@@ -13,10 +7,17 @@ class ColorPickerGrid extends React.Component {
         0x87CEFA, 0x778899, 0x88A19f, 0xB0C4DE,
         0xFFFFE0, 0x00FF00, 0x32CD32, 0xFAF0E6];
 
-    selectColor(event) {
-        let color = event.target.style["backgroundColor"];
+    constructor(props) {
+        super(props);
 
-        onColorChanged && onColorChanged(color);
+        this.onColorChange = props.onColorChange;
+    };
+
+    selectColor = (event) => {
+        let target = event.target;
+        let color = target.style["backgroundColor"];
+
+        this.onColorChange(color);
     };
 
     render() {
