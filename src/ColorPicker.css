@@ -4,16 +4,16 @@ html {
 }
 
 .container {
-    display: table;
-}
-
-.containerRow {
-    display: table-row;
+    width: 150px; height: 150px;
+    border-radius: 4px;
+    padding: 1px;
 }
 
 .containerCell {
-    display: table-cell;
-    border: 1px solid olivedrab;
-    vertical-align: middle;
-    text-align: center;
+    border-style: inset;
+    border-color: azure;
+    float: left;
+    width: 25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
 }
